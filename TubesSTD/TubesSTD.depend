@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1555425193 source:c:\users\altair\documents\github\tubes-struktur-data\tubesstd\main.cpp
+	"Header.h"
+
+1555425263 c:\users\altair\documents\github\tubes-struktur-data\tubesstd\header.h
+	<iostream>
+	<string>
+	"List.h"
+	"Food.h"
+	"Customer.h"
+	"Relation.h"
+	"UI.h"
+
+1555425282 c:\users\altair\documents\github\tubes-struktur-data\tubesstd\list.h
+
+1555425247 c:\users\altair\documents\github\tubes-struktur-data\tubesstd\food.h
+
+1555425216 c:\users\altair\documents\github\tubes-struktur-data\tubesstd\customer.h
+
+1555425298 c:\users\altair\documents\github\tubes-struktur-data\tubesstd\relation.h
+
+1555425320 c:\users\altair\documents\github\tubes-struktur-data\tubesstd\ui.h
+
