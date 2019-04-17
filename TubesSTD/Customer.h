@@ -5,6 +5,7 @@ ElementList<InfoCustomer> *CreateCustomer(List<InfoCustomer> &L, string X) {
     InfoCustomer Customer;
     Customer.NamaPelanggan = X;
     Customer.JumlahMakanan = 0;
+    /* Membuat Element Customer dengan Info = Customer */
     ElementList<InfoCustomer> *C = CreateElement(Customer);
     AddToList(L, C);
     return C;
@@ -27,6 +28,7 @@ ElementList<InfoCustomer> *GetCustomer(List<InfoCustomer> L, string X) {
     while((P != NULL) && (Info(P).NamaPelanggan != X)) {
         P = Next(P);
     }
+    /* P == NULL atau Info(P).NamaPelanggan == X */
     return P;
 }
 
@@ -65,6 +67,7 @@ void SortCustomer(List<InfoCustomer> &L) {
     ElementList<InfoCustomer> *Max, *P;
     List<InfoCustomer> LSort;
     CreateList(LSort);
+    /* Sorting secara Descending menggunakan Algoritma Selection Sort */
     while(First(L) != NULL) {
         Max = First(L);
         P = Next(Max);

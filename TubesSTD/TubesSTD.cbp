@@ -32,6 +32,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Customer.h" />
+		<Unit filename="Food.h" />
+		<Unit filename="Header.h" />
+		<Unit filename="List.h" />
+		<Unit filename="Relation.h" />
+		<Unit filename="UI.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

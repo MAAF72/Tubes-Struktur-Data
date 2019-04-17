@@ -22,6 +22,7 @@ int main() {
             Nama == "ADMIN" ? MenuAdmin(LC, LF, LR) : MenuUser(LC, LF, LR, Nama);
         }
     } while(Nama != "x");
-
+    /* Loop akan terhenti jika user menginputkan "x" */
+    Print("Program selesai!");
     return 0;
 }

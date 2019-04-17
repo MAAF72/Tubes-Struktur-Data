@@ -5,6 +5,7 @@ void CreateFood(List<InfoFood> &L, string X) {
     InfoFood Food;
     Food.NamaMakanan = X;
     Food.JumlahPelanggan = 0;
+    /* Membuat Element Food dengan Info = Food */
     ElementList<InfoFood> *F = CreateElement(Food);
     AddToList(L, F);
 }
@@ -26,6 +27,7 @@ ElementList<InfoFood> *GetFood(List<InfoFood> L, string X) {
     while((P != NULL) && (Info(P).NamaMakanan != X)) {
         P = Next(P);
     }
+    /* P == NULL atau Info(P).NamaMakanan == X */
     return P;
 }
 
@@ -64,6 +66,7 @@ void SortFood(List<InfoFood> &L) {
     ElementList<InfoFood> *Max, *P;
     List<InfoFood> LSort;
     CreateList(LSort);
+    /* Sorting secara Descending menggunakan Algoritma Selection Sort */
     while(First(L) != NULL) {
         Max = First(L);
         P = Next(Max);

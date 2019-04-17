@@ -16,6 +16,7 @@ void CreateList(List<Data> &L) {
 
 template <class Data>
 void AddToList(List<Data> &L, Address A) {
+    /* Menambahkan Element ke List dengan algoritma Insert Last */
     if(First(L) == NULL) {
         First(L) = A;
     } else {
@@ -27,6 +28,7 @@ void AddToList(List<Data> &L, Address A) {
 template <class Data>
 Address DeleteFromList(List<Data> &L, Address &A) {
     /* A tidak boleh NULL */
+    if(A == NULL) return NULL;
     if(First(L) == A) {
         /* Delete First */
         First(L) = Next(A);

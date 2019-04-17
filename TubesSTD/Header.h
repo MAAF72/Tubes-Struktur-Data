@@ -10,6 +10,8 @@
 
 using namespace std;
 
+/* Menggunakan Single Linked List dengan 2 Penunjuk, yaitu First dan Last */
+
 template <class Data>
 struct ElementList {
     Data Info;
