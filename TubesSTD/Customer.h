@@ -1,19 +1,19 @@
 #ifndef CUSTOMER_H_INCLUDED
 #define CUSTOMER_H_INCLUDED
 
-ElementList<InfoCustomer> *CreateCustomer(List<InfoCustomer> &L, string X) {
+auto CreateCustomer(List<InfoCustomer> &L, string X) {
     InfoCustomer Customer;
     Customer.NamaPelanggan = X;
     Customer.JumlahMakanan = 0;
     /* Membuat Element Customer dengan Info = Customer */
-    ElementList<InfoCustomer> *C = CreateElement(Customer);
+    auto C = CreateElement(Customer);
     AddToList(L, C);
     return C;
 }
 
 void PrintCustomer(List<InfoCustomer> L) {
     if(First(L) != NULL) {
-        ElementList<InfoCustomer> *P = First(L);
+        auto P = First(L);
         while(P != NULL) {
             Print("->" + Info(P).NamaPelanggan);
             P = Next(P);
@@ -23,8 +23,8 @@ void PrintCustomer(List<InfoCustomer> L) {
     }
 }
 
-ElementList<InfoCustomer> *GetCustomer(List<InfoCustomer> L, string X) {
-    ElementList<InfoCustomer> *P = First(L);
+auto GetCustomer(List<InfoCustomer> L, string X) {
+    auto P = First(L);
     while((P != NULL) && (Info(P).NamaPelanggan != X)) {
         P = Next(P);
     }
@@ -45,7 +45,7 @@ void ViewCustomer(List<InfoRelation> L, ElementList<InfoCustomer> *P) {
 }
 
 void ViewAllCustomer(List<InfoCustomer> LC, List<InfoRelation> LR) {
-    ElementList<InfoCustomer> *P = First(LC);
+    auto P = First(LC);
     while(P != NULL) {
         Print();
         ViewCustomer(LR, P);
@@ -54,7 +54,7 @@ void ViewAllCustomer(List<InfoCustomer> LC, List<InfoRelation> LR) {
 }
 
 void ViewFoodsBuyers(List<InfoRelation> L, ElementList<InfoFood> *X) {
-    ElementList<InfoRelation> *P = First(L);
+    auto P = First(L);
     while(P != NULL) {
         if(Info(P).Food == X) {
             Print("->" + Info(Info(P).Customer).NamaPelanggan);
@@ -64,13 +64,12 @@ void ViewFoodsBuyers(List<InfoRelation> L, ElementList<InfoFood> *X) {
 }
 
 void SortCustomer(List<InfoCustomer> &L) {
-    ElementList<InfoCustomer> *Max, *P;
     List<InfoCustomer> LSort;
     CreateList(LSort);
     /* Sorting secara Descending menggunakan Algoritma Selection Sort */
     while(First(L) != NULL) {
-        Max = First(L);
-        P = Next(Max);
+        auto Max = First(L);
+        auto P = Next(Max);
         while(P != NULL) {
             if(Info(P).JumlahMakanan > Info(Max).JumlahMakanan) {
                 Max = P;

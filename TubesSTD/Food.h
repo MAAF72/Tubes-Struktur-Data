@@ -5,14 +5,13 @@ void CreateFood(List<InfoFood> &L, string X) {
     InfoFood Food;
     Food.NamaMakanan = X;
     Food.JumlahPelanggan = 0;
-    /* Membuat Element Food dengan Info = Food */
-    ElementList<InfoFood> *F = CreateElement(Food);
-    AddToList(L, F);
+    /* Membuat Element Food dengan Info = Food, lalu memasukkannya kedalam list */
+    AddToList(L, CreateElement(Food));
 }
 
 void PrintFood(List<InfoFood> L) {
     if(First(L) != NULL) {
-        ElementList<InfoFood> *P = First(L);
+        auto P = First(L);
         while(P != NULL) {
             Print("->" + Info(P).NamaMakanan);
             P = Next(P);
@@ -22,8 +21,8 @@ void PrintFood(List<InfoFood> L) {
     }
 }
 
-ElementList<InfoFood> *GetFood(List<InfoFood> L, string X) {
-    ElementList<InfoFood> *P = First(L);
+auto GetFood(List<InfoFood> L, string X) {
+    auto P = First(L);
     while((P != NULL) && (Info(P).NamaMakanan != X)) {
         P = Next(P);
     }
@@ -44,7 +43,7 @@ void ViewFood(List<InfoRelation> L, ElementList<InfoFood> *P) {
 }
 
 void ViewAllFood(List<InfoFood> LF, List<InfoRelation> LR) {
-    ElementList<InfoFood> *P = First(LF);
+    auto P = First(LF);
     while(P != NULL) {
         Print();
         ViewFood(LR, P);
@@ -53,7 +52,7 @@ void ViewAllFood(List<InfoFood> LF, List<InfoRelation> LR) {
 }
 
 void ViewCustomersFoods(List<InfoRelation> L, ElementList<InfoCustomer> *X) {
-    ElementList<InfoRelation> *P = First(L);
+    auto P = First(L);
     while(P != NULL) {
         if(Info(P).Customer == X) {
             Print("->" + Info(Info(P).Food).NamaMakanan);
@@ -63,13 +62,12 @@ void ViewCustomersFoods(List<InfoRelation> L, ElementList<InfoCustomer> *X) {
 }
 
 void SortFood(List<InfoFood> &L) {
-    ElementList<InfoFood> *Max, *P;
     List<InfoFood> LSort;
     CreateList(LSort);
     /* Sorting secara Descending menggunakan Algoritma Selection Sort */
     while(First(L) != NULL) {
-        Max = First(L);
-        P = Next(Max);
+        auto Max = First(L);
+        auto P = Next(Max);
         while(P != NULL) {
             if(Info(P).JumlahPelanggan > Info(Max).JumlahPelanggan) {
                 Max = P;

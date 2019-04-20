@@ -7,13 +7,12 @@ void CreateRelation(List<InfoRelation> &L, ElementList<InfoFood> *F, ElementList
     Relation.Customer = C;
     Info(F).JumlahPelanggan++;
     Info(C).JumlahMakanan++;
-    /* Membuat Element Relation dengan Info = Relation */
-    ElementList<InfoRelation> *R = CreateElement(Relation);
-    AddToList(L, R);
+    /* Membuat Element Relation dengan Info = Relation, lalu memasukkannya kedalam list */
+    AddToList(L, CreateElement(Relation));
 }
 
-ElementList<InfoRelation> *GetRelation(List<InfoRelation> L, ElementList<InfoFood> *F, ElementList<InfoCustomer> *C) {
-    ElementList<InfoRelation> *P = First(L);
+auto GetRelation(List<InfoRelation> L, ElementList<InfoFood> *F, ElementList<InfoCustomer> *C) {
+    auto P = First(L);
     while((P != NULL) && (Info(P).Food != F) && (Info(P).Customer != C)) {
         P = Next(P);
     }

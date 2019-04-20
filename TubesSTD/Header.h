@@ -41,27 +41,27 @@ struct InfoRelation {
 
 /* Primitive for List.h */
 template <class Data>
-Address CreateElement(Data X);
+auto CreateElement(Data X);
 template <class Data>
 void CreateList(List<Data> &L);
 template <class Data>
 void AddToList(List<Data> &L, Address A);
 template <class Data>
-Address DeleteFromList(List<Data> &L, Address &A);
+auto DeleteFromList(List<Data> &L, Address &A);
 
 /* Primitive for Food.h */
 void CreateFood(List<InfoFood> &L, string X);
 void PrintFood(List<InfoFood> L);
-ElementList<InfoFood> *GetFood(List<InfoFood> L, string X);
+auto GetFood(List<InfoFood> L, string X);
 void ViewFood(List<InfoRelation> L, ElementList<InfoFood> *P);
 void ViewAllFood(List<InfoFood> LF, List<InfoRelation> LR);
 void ViewFoodsBuyers(List<InfoRelation> L, ElementList<InfoFood> *X);
 void SortFood(List<InfoFood> &L);
 
 /* Primitive for Customer.h */
-ElementList<InfoCustomer> *CreateCustomer(List<InfoCustomer> &L, string X);
+auto CreateCustomer(List<InfoCustomer> &L, string X);
 void PrintCustomer(List<InfoCustomer> L);
-ElementList<InfoCustomer> *GetCustomer(List<InfoCustomer> L, string X);
+auto GetCustomer(List<InfoCustomer> L, string X);
 void ViewCustomer(List<InfoRelation> L, ElementList<InfoCustomer> *P);
 void ViewAllCustomer(List<InfoCustomer> LC, List<InfoRelation> LR);
 void ViewCustomersFoods(List<InfoRelation> L, ElementList<InfoCustomer> *X);
@@ -69,7 +69,7 @@ void SortCustomer(List<InfoCustomer> &L);
 
 /* Primitive for Relation.h */
 void CreateRelation(List<InfoRelation> &L, ElementList<InfoFood> *F, ElementList<InfoCustomer> *C);
-ElementList<InfoRelation> *GetRelation(List<InfoRelation> L, ElementList<InfoFood> *F, ElementList<InfoCustomer> *C);
+auto GetRelation(List<InfoRelation> L, ElementList<InfoFood> *F, ElementList<InfoCustomer> *C);
 
 /* Primitive for UI.h */
 void Continue();

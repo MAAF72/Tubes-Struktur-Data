@@ -2,8 +2,8 @@
 #define LIST_H_INCLUDED
 
 template <class Data>
-Address CreateElement(Data X) {
-    Address P = new ElementList<Data>;
+auto CreateElement(Data X) {
+    auto P = new ElementList<Data>;
     Info(P) = X;
     Next(P) = NULL;
     return P;
@@ -26,9 +26,9 @@ void AddToList(List<Data> &L, Address A) {
 }
 
 template <class Data>
-Address DeleteFromList(List<Data> &L, Address &A) {
+auto DeleteFromList(List<Data> &L, Address &A) {
     /* A tidak boleh NULL */
-    if(A == NULL) return NULL;
+    if(A == NULL) return A;
     if(First(L) == A) {
         /* Delete First */
         First(L) = Next(A);
@@ -37,7 +37,7 @@ Address DeleteFromList(List<Data> &L, Address &A) {
             Last(L) = NULL;
         }
     } else {
-        Address Prev = First(L);
+        auto Prev = First(L);
         while(Next(Prev) != A) {
             Prev = Next(Prev);
         }

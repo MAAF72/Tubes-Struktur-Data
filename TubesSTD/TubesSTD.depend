@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1555507063 source:c:\users\altair\documents\github\tubes-struktur-data\tubesstd\main.cpp
+1555760385 source:c:\users\altair\documents\github\tubes-struktur-data\tubesstd\main.cpp
 	"Header.h"
 
-1555506554 c:\users\altair\documents\github\tubes-struktur-data\tubesstd\header.h
+1555721955 c:\users\altair\documents\github\tubes-struktur-data\tubesstd\header.h
 	<iostream>
 	<string>
 	"List.h"
@@ -11,13 +11,16 @@
 	"Relation.h"
 	"UI.h"
 
-1555506320 c:\users\altair\documents\github\tubes-struktur-data\tubesstd\list.h
+1555722087 c:\users\altair\documents\github\tubes-struktur-data\tubesstd\list.h
 
-1555506240 c:\users\altair\documents\github\tubes-struktur-data\tubesstd\food.h
+1555722330 c:\users\altair\documents\github\tubes-struktur-data\tubesstd\food.h
 
-1555506195 c:\users\altair\documents\github\tubes-struktur-data\tubesstd\customer.h
+1555721799 c:\users\altair\documents\github\tubes-struktur-data\tubesstd\customer.h
 
-1555506090 c:\users\altair\documents\github\tubes-struktur-data\tubesstd\relation.h
+1555722279 c:\users\altair\documents\github\tubes-struktur-data\tubesstd\relation.h
 
-1555507994 c:\users\altair\documents\github\tubes-struktur-data\tubesstd\ui.h
+1555760514 c:\users\altair\documents\github\tubes-struktur-data\tubesstd\ui.h
+
+1555759888 source:c:\users\altair\documents\github\tubes-struktur-data\tubesstd\test.cpp
+	"Header.h"
 
