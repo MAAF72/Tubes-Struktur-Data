@@ -81,7 +81,7 @@ int main() {
 
     string Nama;
 
-    bool IsTest = true;
+    bool IsTest = false;
 
     if(IsTest) Testing(LF, LC, LR);
     else {

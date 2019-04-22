@@ -102,7 +102,7 @@ void MenuAdmin(List<InfoCustomer> &LC, List<InfoFood> &LF, List<InfoRelation> &L
                     Print("[FAV] Tampilkan pelanggan yang paling banyak memesan");
                     Print("[Nama Customer] Tampilkan pelanggan tertentu");
                     do {
-                        string Pelanggan = GetInput("\nMasukkan nama pelanggan : ");
+                        Pelanggan = GetInput("\nMasukkan nama pelanggan : ");
                         if(Pelanggan == "ALL") ViewAllCustomer(LC, LR);
                         else if(Pelanggan == "FAV") SortCustomer(LC), ViewCustomer(LR, First(LC));
                         else if(Pelanggan != "x") ViewCustomer(LR, GetCustomer(LC, Pelanggan));
